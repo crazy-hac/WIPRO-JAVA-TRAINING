@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+int EvenOddDigitsSum(int input1,char* input2)
+{
+int rem,sum1=0,sum2=0;
+    int x;
+    x=strlen(input2);
+    if(x==4)
+    {
+        while(input1!=0)
+        {
+            rem=input1%10;
+            if(rem%2==0)
+            {
+                sum1=sum1+rem;
+            }
+            input1=input1/10;
+        }
+        return sum1;
+    }
+    else
+    {
+        while(input1!=0)
+        {
+            rem=input1%10;
+            if(rem%2!=0)
+            {
+                sum2=sum2+rem;
+            }
+            input1=input1/10;
+
+        }
+        return sum2;
+        
+    }
+}
